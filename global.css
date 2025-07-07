@@ -1,0 +1,201 @@
+@font-face {
+  font-family: "Young Serif";
+  src: url("/assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+:root{
+
+--clr-neutral-000: hsl(0, 0%, 100%);
+--clr-neutral-100: hsl(30, 54%, 90%);
+--clr-neutral-150: hsl(30, 18%, 87%);
+--clr-neutral-600: hsl(30, 10%, 34%);
+--clr-neutral-900: hsl(24, 5%, 18%);
+
+--clr-Brown-800: hsl(14, 45%, 36%);
+
+--clr-rose-800: hsl(332, 51%, 32%);
+--clr-rose-400: hsl(29, 53%, 90%);
+--clr-rose-50: hsl(330, 100%, 98%);
+
+--clr-body: var(--clr-neutral-600);
+--clr-time: var(--clr-rose-800);
+--clr-subhead: var(--clr-Brown-800);
+--clr-heading: var(--clr-neutral-900);
+--clr-bkgd: var(--clr-neutral-000);
+
+--fw-ys-reg: 400;
+--fw-of-reg: 400;
+--fw-of-semi: 600;
+--fw-of-bold: 700;
+
+--fs-body: 1rem;
+--fs-heading: 2.5rem;
+--fs-subheading: 1.6rem;
+}
+
+html {
+  font-size: 16px
+}
+
+body {
+  min-height: 100vh;           /* Full viewport height */
+  display: flex;
+  justify-content: center;     /* Center horizontally */
+  align-items: center;         /* Center vertically */
+  margin: 0;                   /* Remove default margin */
+  background-color: var(--clr-rose-400);
+  max-width: 100%;
+  padding-top: 6.4%;
+}
+
+.main-card {
+  background-color: var(--clr-bkgd);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 46em;
+  max-width: 100%;
+  border-radius: 1.25em;
+}
+
+h1 {
+  font-family: "Young Serif", sans-serif;
+  color: var(--clr-heading);
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-of-reg);
+  font-display: swap;
+  padding: 0.5rem;
+}
+
+h2 {
+  font-family: "Young Serif", sans-serif;
+  color: var(--clr-Brown-800);
+  font-size: var(--fs-subheading);
+  font-weight: var(--fw-of-reg);
+  font-display: swap;
+}
+
+hr.solid {
+  border-top: 1px solid var(--clr-neutral-100);
+}
+
+.intro-card {
+    width: 90%;
+}
+
+.intro-card p {
+  font-family: "Outfit", sans-serif;
+  color: var(--clr-neutral-900);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-of-reg);
+  font-display: swap;
+}
+
+.recipe-img img {
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+  margin: auto;
+  margin-top: 2.5em;
+}
+
+.preparation-container {
+  background-color: var(--clr-rose-50);
+  width: 90%;
+  padding: 1rem;
+  border-radius: 1em;
+}
+
+.preparation-container h2 {
+  font-family: "Outfit", sans-serif;
+  color: var(--clr-time);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-of-semi);
+  font-display: swap;
+}
+
+.preparation-container li {
+  color: var(--clr-time);
+}
+
+.preparation-container P {
+  font-family: "Outfit", sans-serif;
+  color: var(--clr-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-of-reg);
+  font-display: swap;
+}
+
+.ingredients-card {
+  width: 90%;
+  margin: auto 2rem;
+}
+
+.ingredients-card p {
+  font-family: "Outfit", sans-serif;
+  color: var(--clr-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-of-reg);
+  font-display: swap;
+}
+
+.ingredients-card li {
+  color: var(--clr-Brown-800);
+}
+
+.instructions-card {
+  width: 90%;
+}
+
+.instructions-card li {
+  color: var(--clr-Brown-800);
+  font-family: "Outfit", sans-serif;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-of-bold);
+  font-display: swap;
+}
+
+.instructions-card p {
+  font-family: "Outfit", sans-serif;
+  color: var(--clr-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-of-reg);
+  font-display: swap;
+}
+
+.nutrition-container {
+  width: 90%;
+}
+
+.nutrition-container p {
+  font-family: "Outfit", sans-serif;
+  color: var(--clr-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-of-reg);
+  font-display: swap;
+}
+
+.nutrition-container h3 {
+  font-family: "Outfit", sans-serif;
+  color: var(--clr-Brown-800);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-of-bold);
+  font-display: swap;
+}
+
+.nutrition-container table {
+  width: 100%;
+}
+
+.nutrition-container th, td {
+  border-bottom: 1px solid var(--clr-neutral-100);
+}
