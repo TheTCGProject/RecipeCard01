@@ -34,9 +34,14 @@
 --fw-of-bold: 700;
 
 --fs-body: 1rem;
+--fs-prept: 1.3rem;
 --fs-heading: 2.5rem;
---fs-subheading: 1.6rem;
+--fs-subheading: 1.8rem;
 }
+
+/*-----------------------------------------------------------------------------*/
+/*--------------------- General Settings --------------------------------------*/
+/*-----------------------------------------------------------------------------*/
 
 html {
   font-size: 16px
@@ -50,7 +55,7 @@ body {
   margin: 0;                   /* Remove default margin */
   background-color: var(--clr-rose-400);
   max-width: 100%;
-  padding-top: 6.4%;
+  padding-top: 8.5rem;
 }
 
 .main-card {
@@ -62,6 +67,7 @@ body {
   width: 46em;
   max-width: 100%;
   border-radius: 1.25em;
+  margin-bottom:10%;
 }
 
 h1 {
@@ -70,7 +76,6 @@ h1 {
   font-size: var(--fs-heading);
   font-weight: var(--fw-of-reg);
   font-display: swap;
-  padding: 0.5rem;
 }
 
 h2 {
@@ -85,8 +90,17 @@ hr.solid {
   border-top: 1px solid var(--clr-neutral-100);
 }
 
+/*-----------------------------------------------------------------------------*/
+/*-------------------- Introduction Card --------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+
 .intro-card {
     width: 90%;
+}
+
+.intro-card h1 {
+    padding-inline: 0.2rem;
+    padding-top: 0.2rem;
 }
 
 .intro-card p {
@@ -95,6 +109,11 @@ hr.solid {
   font-size: var(--fs-body);
   font-weight: var(--fw-of-reg);
   font-display: swap;
+  padding-top: 0.2rem;
+  line-height: 1.4rem;
+  margin-top: -0.85rem;
+  padding-left: 0.25rem;
+  padding-bottom: 1rem;
 }
 
 .recipe-img img {
@@ -108,23 +127,34 @@ hr.solid {
   margin-top: 2.5em;
 }
 
+/*-----------------------------------------------------------------------------*/
+/*-------------------- Preparation Card ---------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+
 .preparation-container {
   background-color: var(--clr-rose-50);
-  width: 90%;
-  padding: 1rem;
-  border-radius: 1em;
+  width: 85%;
+  border-radius: 0.45em;
+  padding: 0.5em;
 }
 
 .preparation-container h2 {
   font-family: "Outfit", sans-serif;
   color: var(--clr-time);
-  font-size: var(--fs-body);
+  font-size: var(--fs-prept);
   font-weight: var(--fw-of-semi);
   font-display: swap;
+  padding-left: 0.5em;
 }
 
 .preparation-container li {
   color: var(--clr-time);
+  line-height: 1rem;
+  padding-left: 1em;
+}
+
+.preparation-container ul {
+  padding-left: 2.25em;
 }
 
 .preparation-container P {
@@ -135,12 +165,35 @@ hr.solid {
   font-display: swap;
 }
 
+/*-----------------------------------------------------------------------------*/
+/*-------------------- Ingredients Card ---------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+
 .ingredients-card {
   width: 90%;
-  margin: auto 2rem;
+  margin-top: 0.6rem;
+}
+
+.ingredients-card ul {
+  padding-left: 1.5rem;
+  padding-bottom: 0.15rem;
+}
+
+.ingredients-card li {
+  padding-left: 1.25rem;
+}
+
+.ingredients-card h2 {
+  margin-left: 0.25rem;
+  font-family: "Young Serif", sans-serif;
+  color: var(--clr-Brown-800);
+  font-size: var(--fs-subheading);
+  font-weight: var(--fw-of-reg);
+  font-display: swap;
 }
 
 .ingredients-card p {
+  margin-top: -0.25rem;
   font-family: "Outfit", sans-serif;
   color: var(--clr-body);
   font-size: var(--fs-body);
@@ -148,13 +201,25 @@ hr.solid {
   font-display: swap;
 }
 
-.ingredients-card li {
-  color: var(--clr-Brown-800);
-}
+/*-----------------------------------------------------------------------------*/
+/*------------------ Instructions Card ----------------------------------------*/
+/*-----------------------------------------------------------------------------*/
 
 .instructions-card {
   width: 90%;
+  margin-top: -0.45rem;
 }
+
+.instructions-card h2 {
+  padding-left: 0.2rem;
+}
+
+.instructions-card ol {
+  padding-left: 1.75rem;
+  padding-bottom: 0.15rem;
+  margin-top: -0.2rem;
+}
+
 
 .instructions-card li {
   color: var(--clr-Brown-800);
@@ -162,6 +227,8 @@ hr.solid {
   font-size: var(--fs-body);
   font-weight: var(--fw-of-bold);
   font-display: swap;
+  padding-left: 1rem;
+  line-height: 1.2rem;
 }
 
 .instructions-card p {
@@ -172,8 +239,13 @@ hr.solid {
   font-display: swap;
 }
 
+/*-----------------------------------------------------------------------------*/
+/*-------------------- Nutritions Card ----------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+
 .nutrition-container {
   width: 90%;
+  margin-top: -0.4rem;
 }
 
 .nutrition-container p {
@@ -182,6 +254,7 @@ hr.solid {
   font-size: var(--fs-body);
   font-weight: var(--fw-of-reg);
   font-display: swap;
+  margin-top: -0.25em;
 }
 
 .nutrition-container h3 {
@@ -193,9 +266,16 @@ hr.solid {
 }
 
 .nutrition-container table {
-  width: 100%;
+  table-layout: fixed;
+  min-width: 700px;
+  width: 80%;
+  border-collapse: collapse; /*to avoid double borders and unwanted spacing*/
 }
 
-.nutrition-container th, td {
+.nutrition-container tr:not(:last-child) td  {
   border-bottom: 1px solid var(--clr-neutral-100);
+}
+
+.nutrition-container tr:last-child td {
+  border-bottom: none; /* No border for the last row */
 }
